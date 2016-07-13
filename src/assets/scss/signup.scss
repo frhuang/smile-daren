@@ -1,0 +1,113 @@
+@import "mixin";
+.su-page{
+  width: 100%;
+  height: 100%;
+  background-color: #ffff66;
+  background-size: cover;
+  overflow: hidden;
+  .su-container{
+    width: 90%;
+    margin: 1rem auto;
+    @include font-dpr(16px);
+    .su-clear{
+      zoom: 1;
+      &:after{
+        content: " ";
+        display: block;
+        clear: both;
+        height: 0;
+      }
+    }
+    .su-input{
+      margin: .4rem 0 ;
+      width: 100%;
+      .su-title{
+        margin-bottom: .2rem;
+      }
+      input{
+        width: 80%;
+        @include font-dpr(16px);
+        margin-left: .2rem;
+        padding-left: .1rem;
+        vertical-align: middle;
+        line-height: .5rem;
+        background: transparent;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #ff3333 !important;
+      }
+      ul{
+        width: 100%;
+        list-style: none;
+        li{
+          float: left;
+          width: 33%;
+          text-align: center;
+          img{
+            width: 80%;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+    .su-welfare{
+      display: block;
+      text-align: center;
+      color: #ff3333;
+    }
+    .su-submit{
+      text-decoration: none;
+      color: #fff;
+      position: fixed;
+      bottom: .8rem;
+      left: 50%;
+      margin-left: -1.5rem;
+      width: 3rem;
+      height: .8rem;
+      line-height: .8rem;
+      border-radius: .2rem;
+      background: #ff3333;
+      text-align: center;
+      display: block;
+    }
+  }
+  .welfare-page{
+    display: none;
+    width: 100%;
+    height: 50%;
+    background: rgba(0,0,0,.95);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -50%;
+    margin-top: -50%;
+    text-align: left;
+    color: #fff;
+    .welfare-container{
+      width: 80%;
+      margin: 1rem auto;
+      p{
+        margin-top: .2rem;
+        @include font-dpr(16px);
+      }
+    }
+  }
+  .pic-mask{
+    display: none;
+    position: absolute;
+    z-index: 9;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@import "mixin";
+.share-page{
+  width: 100%;
+  .share-container{
+    width: 80%;
+    margin: .5rem auto;
+    .share-title{
+      @include font-dpr(16px);
+    }
+    .share-nick{
+      text-align: center;
+      @include font-dpr(16px);
+    }
+    .share-img{
+      margin:1rem auto;
+      text-align: center;
+    }
+    .share-link{
+      text-align: center;
+      .link-item{
+        display: block;
+        text-decoration: none;
+        width: 60%;
+        line-height: .5rem;
+        background: #ff3333;
+        margin: .2rem auto;
+        color: #fff;
+      }
+    }
+  }
+}
